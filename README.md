@@ -39,24 +39,10 @@ The **modinfo.ini Maker** is a companion tool for the Cyberpunk 2077 Mod Manager
 ## 🚀 Installation
 
 ### Download Release
-1. Download the latest release from [Releases](https://github.com/TheCuteFatCat/Cyberpunk-2077-Modmanager/releases)
+1. Download the latest release from [Releases](https://github.com/TheCuteFatCat/INIMAKER/releases)
 2. Run the installer or portable executable
 3. Launch the application
-
-### Build from Source
-```bash
-# Clone the repository
-git clone https://github.com/TheCuteFatCat/Cyberpunk-2077-Modmanager.git
-cd "Cyberpunk-2077-Modmanager/modinfo.ini Maker"
-
-# Install dependencies
-npm install
-
-# Start in development mode
-npm start
-
-# Build for production
-npm run build
+   
 ```
 
 ---
@@ -97,14 +83,14 @@ npm run build
    - Check that all information is correct
 
 5. **Save the File**
-   - Click **Speichern als modinfo.ini**
+   - Click **Save as modinfo.ini**
    - If you set a mod folder, the tool will try to find your mod automatically
    - Otherwise, select the destination folder manually
    - The file will be saved as `modinfo.ini`
 
 ### Editing an Existing File
 
-1. Click the 📂 **Laden** button in the header
+1. Click the 📂 **Load** button in the header
 2. Select your existing `modinfo.ini` file
 3. All fields will be populated automatically
 4. Make your changes and save
