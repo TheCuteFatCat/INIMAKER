@@ -27,25 +27,12 @@ The **modinfo.ini Maker** is a companion tool for the Cyberpunk 2077 Mod Manager
 - In-game item and vehicle spawn codes
 - Add-on relationships
 
-## ✨ Features
-
-### 🎨 User-Friendly Interface
-- **Visual Form Editor** - Fill out fields instead of editing text files manually
-- **Live Preview** - See your modinfo.ini in real-time as you type
-- **Cyberpunk Theme** - Sleek neon design matching the Mod Manager
-
-### 🔧 Smart Functionality
+### ✨ Features
 - **Auto-Save Folder Location** - Remembers your mod folder for quick exports
 - **Load & Edit** - Open existing modinfo.ini files for modification
 - **Multiple Authors** - Support for up to 2 mod authors
 - **Dependency Manager** - Add multiple required mods with ease
 - **Code Formatter** - Automatically formats console commands
-
-### ✅ Validation & Help
-- **Required Field Indicators** - Never miss important information
-- **Inline Help Text** - Guidance for each field
-- **Category Dropdown** - Select from predefined Nexus Mods categories
-- **Automatic URL Generation** - Creates proper Nexus Mods links
 
 ---
 
