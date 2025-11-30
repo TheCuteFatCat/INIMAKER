@@ -43,8 +43,6 @@ The **modinfo.ini Maker** is a companion tool for the Cyberpunk 2077 Mod Manager
 2. Run the installer or portable executable
 3. Launch the application
    
-```
-
 ---
 
 ## 📖 Usage
