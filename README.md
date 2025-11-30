@@ -1,95 +1,245 @@
-modinfo.ini Maker
 <div align="center">
+
+# 🛠️ modinfo.ini Maker
+
 <img src="https://img.shields.io/badge/version-1.0.0-00f0ff?style=for-the-badge" alt="Version">
 <img src="https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows" alt="Platform">
 <img src="https://img.shields.io/badge/Electron-latest-47848F?style=for-the-badge&logo=electron" alt="Electron">
 <img src="https://img.shields.io/badge/license-MIT-00ff41?style=for-the-badge" alt="License">
-A cyberpunk-themed tool for creating modinfo.ini files for Cyberpunk 2077 mods
-Companion tool for the Cyberpunk 2077 Mod Manager
+
+**A visual tool for creating modinfo.ini files for Cyberpunk 2077 mods**
+
+Part of the [Cyberpunk 2077 Mod Manager](https://github.com/TheCuteFatCat/Cyberpunk-2077-Modmanager) ecosystem
+
+[Features](#✨-features) • [Installation](#🚀-installation) • [Usage](#📖-usage) • [File Format](#📋-file-format)
+
+---
 
 </div>
-🎯 What is this?
-The modinfo.ini Maker helps mod creators easily generate properly formatted modinfo.ini files for their Cyberpunk 2077 mods. These files enable full compatibility with the Cyberpunk Mod Manager, unlocking features like:
 
-Mod descriptions and author links
-Screenshot displays
-Item/vehicle spawn codes
-Dependency tracking
-Add-on detection
+## 📝 About
 
-✨ Features
+The **modinfo.ini Maker** is a companion tool for the Cyberpunk 2077 Mod Manager that simplifies the creation of `modinfo.ini` files. These files provide metadata about your mods, enabling features like:
 
-Visual Form Interface - No need to remember INI syntax
-Live Preview - See your modinfo.ini as you type
-Auto-formatting - Generates proper links and code formatting
-Smart Validation - Highlights required fields
-Load & Edit - Import existing modinfo.ini files to update them
-Saved Folder - Remembers your mod folder location for quick exports
+- Rich mod descriptions and screenshots
+- Author attribution with Nexus Mods profile links
+- Dependency tracking
+- In-game item and vehicle spawn codes
+- Add-on relationships
 
-🚀 Quick Start
+## ✨ Features
 
-Download the latest release
-Launch the application
-Fill in your mod details in the form
-Click the Preview button to verify
-Save directly to your mod folder
+### 🎨 User-Friendly Interface
+- **Visual Form Editor** - Fill out fields instead of editing text files manually
+- **Live Preview** - See your modinfo.ini in real-time as you type
+- **Cyberpunk Theme** - Sleek neon design matching the Mod Manager
 
-📝 Basic Usage
-First Time Setup
+### 🔧 Smart Functionality
+- **Auto-Save Folder Location** - Remembers your mod folder for quick exports
+- **Load & Edit** - Open existing modinfo.ini files for modification
+- **Multiple Authors** - Support for up to 2 mod authors
+- **Dependency Manager** - Add multiple required mods with ease
+- **Code Formatter** - Automatically formats console commands
 
-Click the ⚙ Ordner (Folder) button in the top-right
-Select your main mods folder
-The tool will remember this location
+### ✅ Validation & Help
+- **Required Field Indicators** - Never miss important information
+- **Inline Help Text** - Guidance for each field
+- **Category Dropdown** - Select from predefined Nexus Mods categories
+- **Automatic URL Generation** - Creates proper Nexus Mods links
 
-Creating a modinfo.ini
+---
 
-Fill in the required fields (marked with *):
+## 🚀 Installation
 
-Name - Your mod's name
-Addon für - Parent mod name (if this is an add-on)
-Autor - Your Nexus Mods username
-Kategorie - Select from dropdown
-Mod Nummer - Your Nexus Mods ID
+### Download Release
+1. Download the latest release from [Releases](https://github.com/TheCuteFatCat/Cyberpunk-2077-Modmanager/releases)
+2. Run the installer or portable executable
+3. Launch the application
 
+### Build from Source
+```bash
+# Clone the repository
+git clone https://github.com/TheCuteFatCat/Cyberpunk-2077-Modmanager.git
+cd "Cyberpunk-2077-Modmanager/modinfo.ini Maker"
 
-Add optional information:
+# Install dependencies
+npm install
 
-Version, description, screenshots
-Second author (click the + button)
-Required mods/dependencies
-In-game spawn codes
+# Start in development mode
+npm start
 
+# Build for production
+npm run build
+```
 
-Click Speichern als modinfo.ini (Save as modinfo.ini)
+---
 
-Editing an Existing File
+## 📖 Usage
 
-Click 📁 Laden (Load) in the top-right
-Select your modinfo.ini file
-Edit any fields
-Save to update the file
+### First Time Setup
 
-🎮 Code Format
-When adding spawn codes, enter one per line:
-Game.AddToInventory("Items.YourItem_01")
-Game.AddToInventory("Items.YourItem_02")
-The tool automatically formats them correctly (removes semicolons, combines into single line).
-📦 Requirements
+1. **Set Mod Folder** (Optional)
+   - Click the ⚙️ **Ordner** button in the header
+   - Select the parent folder containing your mod folders
+   - This allows the tool to automatically find the correct mod folder when saving
 
-Windows 10/11
-No additional software needed
+### Creating a modinfo.ini
 
-🔗 Related Projects
+1. **Fill Out the Form**
+   - Enter your mod's name, version, and description
+   - Add author information (Nexus Mods username)
+   - Select a category from the dropdown
+   - Enter the Nexus Mods mod number (from the URL)
 
-Cyberpunk 2077 Mod Manager - The main mod manager
-Community modinfo.ini Collection - Pre-made files for popular mods
+2. **Add Dependencies** (Optional)
+   - Enter required mods like "ArchiveXL" or "Cyber Engine Tweaks"
+   - Click **+** to add more requirements
+   - Click **−** to remove a requirement
 
-🤝 For Mod Authors
-Adding a modinfo.ini to your mod releases makes them fully compatible with the Mod Manager and provides a better experience for users. Consider including one in your next update!
-📄 License
-MIT License - see LICENSE file for details
+3. **Add Item Codes** (Optional)
+   - Enter console commands for spawning items
+   - One code per line, for example:
+     ```
+     Game.AddToInventory("Items.YourItem_01")
+     Game.AddToInventory("Items.YourItem_02")
+     ```
+   - Semicolons are automatically removed
+
+4. **Preview Your Work**
+   - Click the **Preview** button to see the formatted output
+   - Check that all information is correct
+
+5. **Save the File**
+   - Click **Speichern als modinfo.ini**
+   - If you set a mod folder, the tool will try to find your mod automatically
+   - Otherwise, select the destination folder manually
+   - The file will be saved as `modinfo.ini`
+
+### Editing an Existing File
+
+1. Click the 📂 **Laden** button in the header
+2. Select your existing `modinfo.ini` file
+3. All fields will be populated automatically
+4. Make your changes and save
+
+---
+
+## 📋 File Format
+
+The tool generates `modinfo.ini` files with the following structure:
+
+```ini
+name=My Awesome Mod
+addonfor=Main Mod Name
+version=1.0
+description=A cool new outfit for V
+screenshot=screen.png
+author=YourNexusUsername
+authorlink=https://next.nexusmods.com/profile/YourNexusUsername
+author2=Contributor
+authorlink2=https://next.nexusmods.com/profile/Contributor
+category=Armour and Clothing
+modlink=https://www.nexusmods.com/cyberpunk2077/mods/12345
+requirements=ArchiveXL, Cyber Engine Tweaks
+codes=Game.AddToInventory("Items.MyItem_01")Game.AddToInventory("Items.MyItem_02")
+```
+
+### Field Reference
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `name` | ✅ | Display name of your mod |
+| `addonfor` | ✅ | Parent mod name (if this is an add-on) |
+| `version` | ⚠️ Recommended | Version number |
+| `description` | ⚠️ Recommended | Brief description |
+| `screenshot` | ❌ | Screenshot filename (defaults to `screen.png`) |
+| `author` | ✅ | Primary author's Nexus username |
+| `authorlink` | ✅ | Auto-generated Nexus profile URL |
+| `author2` | ❌ | Second author (optional) |
+| `authorlink2` | ❌ | Second author's profile URL |
+| `category` | ✅ | Mod category |
+| `modlink` | ✅ | Auto-generated from mod number |
+| `requirements` | ❌ | Comma-separated list of required mods |
+| `codes` | ❌ | Console commands for spawning items |
+
+### Valid Categories
+- Appearance
+- Armour and Clothing
+- Characters
+- Gameplay
+- Miscellaneous
+- Modders Resources
+- User Interface
+- Utilities
+- Vehicles
+- Visuals and Graphics
+- Weapons
+- Framework
+
+---
+
+## 🎯 Why Use This Tool?
+
+### For Mod Creators
+- **Save Time** - No more manual text file editing
+- **Reduce Errors** - Validation ensures correct format
+- **Professional Results** - Properly formatted links and metadata
+- **Easy Updates** - Load and modify existing files quickly
+
+### For the Community
+- **Better Mod Manager Integration** - Enables rich features in the Mod Manager
+- **Improved Discoverability** - Proper categorization and metadata
+- **Clear Dependencies** - Users know exactly what's required
+- **Item Code Reference** - Easy access to spawn commands
+
+---
+
+## 🔗 Related Projects
+
+This tool is part of the **Cyberpunk 2077 Mod Manager** ecosystem:
+
+- **[Cyberpunk 2077 Mod Manager](https://github.com/TheCuteFatCat/Cyberpunk-2077-Modmanager)** - Main mod management application
+- **[Community modinfo.ini Collection](https://justpaste.it/mawx0)** - Pre-made files for popular mods
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+### Development Setup
+```bash
+npm install
+npm start
+```
+
+### Building
+```bash
+npm run build          # Build for current platform
+npm run build-win      # Windows installer
+npm run build-portable # Portable executable
+```
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- CD Projekt Red for Cyberpunk 2077
+- The Nexus Mods community
+- All mod creators making Night City even better
+
+---
 
 <div align="center">
-Made with ❤️ for the Cyberpunk 2077 modding community
+
+**Made with ❤️ for the Cyberpunk 2077 modding community**
+
 ⭐ Star this repo if you find it useful!
+
 </div>
